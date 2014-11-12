@@ -1,3 +1,5 @@
+#!/usr/bin/python2
+
 #encoding:utf-8
 __author__ = 'ubaldino'
 __copyright__ = "...."
@@ -166,58 +168,55 @@ class Main( wx.Frame ):
 			self.txt_result.SetLabel( "Fallo en telefono 3" )
 	# funciones de activacion
 	def actv1( self , evt):
-		if len( self.txt_actv1.GetValue() ) == 5:
-			datos = self.mensaje_serial( str( self.txt_actv1.GetValue() ) + "*e\n" , 2 )
-			print str( self.txt_actv1.GetValue() ) + "*e  : \n" + datos
+		if len( self.txt_actv1.GetValue() ) > 0:
+			datos = self.mensaje_serial( str( self.txt_actv1.GetValue() ) + "*e\n" , 2.5 )
 			self.txt_result.SetLabel( datos )
 		else:
-			self.txt_result.SetLabel( "Fallo en telefono 3" )
+			self.txt_result.SetLabel( "Fallo en activacion 1" )
 
 	def actv2( self , evt):
-		if len( self.txt_actv2.GetValue() ) == 5:
-			datos = self.mensaje_serial( str( self.txt_actv2.GetValue() ) + "*f\n" , 2 )
-			print str( self.txt_actv2.GetValue() ) + "*f  : \n" + datos
+		if len( self.txt_actv2.GetValue() ) > 0:
+			datos = self.mensaje_serial( str( self.txt_actv2.GetValue() ) + "*f\n" , 2.5 )
 			self.txt_result.SetLabel( datos )
 		else:
-			self.txt_result.SetLabel( "Fallo en telefono 3" )
+			self.txt_result.SetLabel( "Fallo en activacion 2" )
 
 	def actv3( self , evt):
-		if len( self.txt_actv3.GetValue() ) == 5:
-			datos = self.mensaje_serial( str( self.txt_actv3.GetValue() ) + "*g\n" , 2 )
-			print str( self.txt_actv3.GetValue() ) + "*g  : \n" + datos
+		if len( self.txt_actv3.GetValue() ) > 0:
+			datos = self.mensaje_serial( str( self.txt_actv3.GetValue() ) + "*g\n" , 2.5 )
 			self.txt_result.SetLabel( datos )
 		else:
-			self.txt_result.SetLabel( "Fallo en telefono 3" )
+			self.txt_result.SetLabel( "Fallo en activacion 3" )
 	#funciones de entrada
 				
 	def ent1( self , evt ):
-		if len( self.txt_disp_ent1.GetValue() ) == 7:
-			datos = self.mensaje_serial( str( self.txt_disp_ent1.GetValue() ) + "*h\n" , 2 )
-			print str( self.txt_disp_ent1.GetValue() ) + "*h\n" + datos
+		if len( self.txt_disp_ent1.GetValue() ) > 0:
+			self.txt_result.SetLabel( str( self.txt_disp_ent1.GetValue() ) + "*h\n" )
+			datos = self.mensaje_serial( str( self.txt_disp_ent1.GetValue() ) + "*h\n" , 3 )
 			self.txt_result.SetLabel( datos )
 		else:
-			self.txt_result.SetLabel( "Fallo en telefono 3" )
+			self.txt_result.SetLabel( "Fallo en entrada 1" )
 
 	def ent2( self , evt ):
-		if len( self.txt_disp_ent2.GetValue() ) == 7:
-			datos = self.mensaje_serial( str( self.txt_disp_ent2.GetValue() ) + "*i\n" , 2 )
-			print str( self.txt_disp_ent2.GetValue() ) + "*i\n" + datos
+		if len( self.txt_disp_ent2.GetValue() ) > 0:
+			self.txt_result.SetLabel( str( self.txt_disp_ent2.GetValue() ) + "*i\n" )
+			datos = self.mensaje_serial( str( self.txt_disp_ent2.GetValue() ) + "*i\n" , 3 )
 			self.txt_result.SetLabel( datos )
 		else:
-			self.txt_result.SetLabel( "Fallo en telefono 3" )
+			self.txt_result.SetLabel( "Fallo en entrada 2" )
 
 	def ent3( self , evt):
-		if len( self.txt_disp_ent3.GetValue() ) == 7:
-			datos = self.mensaje_serial( str( self.txt_disp_ent3.GetValue() ) + "*j\n" , 2 )
-			print str( self.txt_disp_ent3.GetValue() ) + "*j\n" + datos
+		if len( self.txt_disp_ent3.GetValue() ) > 0:
+			self.txt_result.SetLabel( str( self.txt_disp_ent3.GetValue() ) + "*j\n" )
+			datos = self.mensaje_serial( str( self.txt_disp_ent3.GetValue() ) + "*j\n" , 3 )
 			self.txt_result.SetLabel( datos )
 		else:
-			self.txt_result.SetLabel( "Fallo en telefono 3" )
+			self.txt_result.SetLabel( "Fallo en entrada 3" )
 	
 	def ent4( self , evt):
-		if len( self.txt_disp_ent4.GetValue() ) == 7:
-			datos = self.mensaje_serial( str( self.txt_disp_ent4.GetValue() ) + "*k\n" , 2 )
-			print str( self.txt_disp_ent4.GetValue() ) + "*k\n" + datos
+		if len( self.txt_disp_ent4.GetValue() ) > 0:
+			self.txt_result.SetLabel( str( self.txt_disp_ent4.GetValue() ) + "*k\n" )
+			datos = self.mensaje_serial( str( self.txt_disp_ent4.GetValue() ) + "*k\n" , 3 )
 			self.txt_result.SetLabel( datos )
 		else:
 			self.txt_result.SetLabel( "Fallo en telefono 3" )
